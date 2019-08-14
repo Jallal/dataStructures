@@ -1,0 +1,6 @@
+/.idea/
+/challenges/target/
+challenges/target/
+*.iml
+/challenges/*.iml
+
