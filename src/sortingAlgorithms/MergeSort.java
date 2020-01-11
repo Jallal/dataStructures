@@ -11,6 +11,51 @@ public class MergeSort {
 
     public static void sort(Comparable[] a) {
 
+        Comparable[] aux= new Comparable[a.length];
+        sort(a,aux,0,a.length);
+
+    }
+    public static void sort(Comparable[] a, Comparable[] aux, int lo, int hi){
+
+
+        if(hi<=lo){
+
+            int mid = lo+(hi-lo)/2; //compute the value of the mid point
+            sort(a,aux,lo,mid);//sort the first half
+            sort(a,aux,mid+1,hi);//sort the 2nd half
+            merge(a,aux,lo,mid,hi);//merge the 2 tpgether
+        }
+    }
+
+    public static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
+
+        for (int k = 0; k <= hi; k++) {
+
+            aux[k] = a[k];
+        }
+
+        int i = lo;
+        int j = mid + 1;
+
+        for (int k = 0; i <= hi; k++) {
+
+            if (i > mid) {
+
+                a[k] = aux[j++]; //i is exhausted
+            } else if (j > hi) {
+
+                a[k] = aux[j++]; //j is exhausted
+            } else if (less(aux[j], aux[i])) {
+
+                a[k] = aux[j++];
+            } else {
+
+                a[k] = aux[i++];
+            }
+
+        }
+
+
     }
 
 
