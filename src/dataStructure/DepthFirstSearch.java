@@ -31,7 +31,7 @@ public class DepthFirstSearch {
 
     public static void main(String[] args) {
 
-        String fileName = "./src/resources/smallGraph.txt";
+        String fileName = "designPatterns/factoryPattern/src/resources/smallGraph.txt";
         In in = new In(fileName);
         Graph G = new Graph(in);
         DepthFirstSearch dfs = new DepthFirstSearch(G, 5);

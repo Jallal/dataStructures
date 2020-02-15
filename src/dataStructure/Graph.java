@@ -273,7 +273,7 @@ import java.util.Stack;
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        //String fileName="./src/resources/smallGraph.txt";
+        //String fileName="./designPatterns.factoryPattern.src/resources/smallGraph.txt";
         In in = new In(args[0]);
         Graph G = new Graph(in);
         System.out.println(G);
