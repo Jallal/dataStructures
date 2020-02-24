@@ -1,5 +1,3 @@
-package dataStructure;
-
 public class Stacks {
 
     private Node first = null;

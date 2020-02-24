@@ -1,4 +1,3 @@
-package leetCode;
 
 import usefulImplementations.StdRandom;
 
