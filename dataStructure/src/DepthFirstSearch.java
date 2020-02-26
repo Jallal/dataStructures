@@ -1,4 +1,4 @@
-package dataStructure;
+
 
 import Util.In;
 
@@ -31,7 +31,7 @@ public class DepthFirstSearch {
 
     public static void main(String[] args) {
 
-        String fileName = "designPatterns/factoryMethodPattern/src/resources/smallGraph.txt";
+        String fileName = "resources/smallGraph.txt";
         In in = new In(fileName);
         Graph G = new Graph(in);
         DepthFirstSearch dfs = new DepthFirstSearch(G, 5);

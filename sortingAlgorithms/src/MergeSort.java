@@ -1,6 +1,3 @@
-package sortingAlgorithms;
-
-import static sortingAlgorithms.SelectionSort.ZERO;
 
 public class MergeSort {
     /**
@@ -64,7 +61,7 @@ public class MergeSort {
      */
     private static boolean less(Comparable v, Comparable w) {
 
-        return v.compareTo(w) < ZERO;
+        return v.compareTo(w) < SelectionSort.ZERO;
     }
 
 

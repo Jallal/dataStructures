@@ -1,12 +1,11 @@
-package dataStructure;
 
 public class Queues {
+
     private Node first;
     private Node last;
 
 
     public String dequeue() {
-
 
         String item = first.item;
         first = first.next;

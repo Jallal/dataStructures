@@ -1,11 +1,9 @@
-package dataStructure;
-
 
 public class LinkedStackOfStrings {
+
     private Node first;
 
     public static void main(String[] args) {
-
 
         LinkedStackOfStrings stack = new LinkedStackOfStrings();
     }
@@ -18,7 +16,6 @@ public class LinkedStackOfStrings {
 
     public void push(String item) {
 
-
         // Insert a new node at the beginning of the list.
         Node oldFirst = first;
         first = new Node();
@@ -28,7 +25,6 @@ public class LinkedStackOfStrings {
 
     public String pop() {
 
-
         // Remove the first node from the list and return item.
         String item = first.item;
         first = first.next;
@@ -36,6 +32,7 @@ public class LinkedStackOfStrings {
     }
 
     private class Node {
+
         private String item;
         private Node next;
     }

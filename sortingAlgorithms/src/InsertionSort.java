@@ -1,7 +1,3 @@
-package sortingAlgorithms;
-
-import static sortingAlgorithms.SelectionSort.ZERO;
-
 public class InsertionSort {
     /*
      *
@@ -36,7 +32,7 @@ public class InsertionSort {
 
     private static boolean less(Comparable v, Comparable w) {
 
-        return v.compareTo(w) < ZERO;
+        return v.compareTo(w) < SelectionSort.ZERO;
     }
 
 

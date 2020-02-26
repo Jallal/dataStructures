@@ -1,5 +1,3 @@
-package sortingAlgorithms;
-
 public class SelectionSort {
 
     public static final int ZERO = 0;
