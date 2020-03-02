@@ -1,7 +1,7 @@
 public class BST<String extends Comparable<String>> {
 
 // BST : binary search tree is a binary tree in symetric order.
-// A BST s either empty or or two disjoined binary trees (left amd right)
+// A BST s either empty or or two disjoined binary trees (left and right)
     //Every node has a key and every node's key is:
     //1-larger than all keys its left subtree
     //2-Smaller than all keys in its right subtree

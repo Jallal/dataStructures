@@ -7,10 +7,6 @@ public class QuickSort {
      * Quick sort is faster than merge sort
      *
      * */
-
-
-
-
     /**
      * Phase I: repeat until i and j pointers cross
      * scan i from left to right so long as (a[i]<a[lo])
@@ -50,9 +46,6 @@ public class QuickSort {
      *            |     |           |
      *           lo     i           j
      * */
-
-
-
 
     /**
      * below is a quick implementation olf the quick sort partitionig methos
@@ -117,7 +110,6 @@ public class QuickSort {
 
 
         //3 ways quicksort : java implementation
-
     private static void threWaySort(Comparable[] a, int lo, int hi) {
         if (hi <= lo) {
             return;

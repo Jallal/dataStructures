@@ -1,9 +1,6 @@
 
 import usefulImplementations.StdRandom;
 
-import java.util.Random;
-
-import static sortingAlgorithms.SelectionSort.ZERO;
 
 public class CalculateTheMedian {
 
@@ -105,7 +102,7 @@ public class CalculateTheMedian {
 
     private static boolean less(Comparable v, Comparable w) {
 
-        return v.compareTo(w) < ZERO;
+        return v.compareTo(w) < 0;
     }
 
     /**
