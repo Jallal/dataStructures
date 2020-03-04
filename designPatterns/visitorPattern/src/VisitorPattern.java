@@ -4,20 +4,15 @@ import java.util.List;
 import java.util.UUID;
 
 /* Visitor pattern implementation
-*
-*
+* The purpose of the visitor pattern is to define a new operation without introducing the modification to the existing
+* object structure
 * */
 public class VisitorPattern {
 
-
-    public interface Visitor {
-
-        void visit(XmlElement xe);
-
-        void visit(JsonElement je);
-    }
-
-
+    /*
+    * Our example is a custom document object that consists of JSOn amd XML
+    * concret elements
+    * */
     public static class Document extends Element {
 
         List<Element> elements = new ArrayList<>();
@@ -34,6 +29,20 @@ public class VisitorPattern {
         }
     }
 
+/*
+*
+* The visitor inteface that will need to be implemented
+* */
+    public interface Visitor {
+
+        void visit(XmlElement xe);
+
+        void visit(JsonElement je);
+    }
+
+    /*
+    * The implementation of the visitor pattern
+    * */
     public static class ElementVisitor implements Visitor {
 
         @Override
@@ -47,7 +56,10 @@ public class VisitorPattern {
         }
     }
 
-
+    /*
+     * Xml element which is part of our Documents elements
+     *
+     * */
     public static class XmlElement extends Element {
 
         public XmlElement(String uuid) {
@@ -59,6 +71,10 @@ public class VisitorPattern {
         }
     }
 
+    /*
+    * Json element which is part of our Documents elements
+    *
+    * */
     public static class JsonElement extends Element {
 
         public JsonElement(String uuid) {
@@ -71,20 +87,21 @@ public class VisitorPattern {
     }
 
 
-    private static String generateUuid() {
-        return UUID.randomUUID()
-                .toString();
-    }
 
-
+/*
+* First, we create an elelmentVisitor, it hold the algorithemwe will apply to our element
+* Next, we setup our Document with proper components and apply the visitor which will be
+* accepted be every element of an object structure
+*
+* */
     public static void main(String[] args) {
 
         Visitor v = new ElementVisitor();
 
-        Document d = new Document(generateUuid());
-        d.elements.add(new JsonElement(generateUuid()));
-        d.elements.add(new JsonElement(generateUuid()));
-        d.elements.add(new XmlElement(generateUuid()));
+        Document d = new Document(UUID.randomUUID().toString());
+        d.elements.add(new JsonElement(UUID.randomUUID().toString()));
+        d.elements.add(new JsonElement(UUID.randomUUID().toString()));
+        d.elements.add(new XmlElement(UUID.randomUUID().toString()));
 
         d.accept(v);
     }

@@ -6,5 +6,8 @@ public abstract class Element {
         this.uuid = uuid;
     }
 
+    /*
+    * The Element class has an abstract method which accepts the visitor interface
+    * */
     public abstract void accept(VisitorPattern.Visitor v);
 }
