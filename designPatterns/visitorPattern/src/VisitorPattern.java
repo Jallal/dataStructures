@@ -3,6 +3,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/* Visitor pattern implementation
+*
+*
+* */
 public class VisitorPattern {
 
 
@@ -12,6 +16,7 @@ public class VisitorPattern {
 
         void visit(JsonElement je);
     }
+
 
     public static class Document extends Element {
 
