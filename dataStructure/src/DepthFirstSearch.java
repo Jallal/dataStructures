@@ -15,7 +15,7 @@ public class DepthFirstSearch {
 
     public DepthFirstSearch(Graph g, int s) {
 
-        //initialize the arries
+        //initialize the aries
         this.marked = new boolean[g.V()];
         this.edgeTo = new int[g.V()];
 
@@ -63,8 +63,7 @@ public class DepthFirstSearch {
     }
 
     public Iterable<Integer> pathTo(int v) {
-
-
+        
         if (!hasPathTo(v)) {
             return null;
         }

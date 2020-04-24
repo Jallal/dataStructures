@@ -31,7 +31,7 @@ public class VisitorPattern {
 
 /*
 *
-* The visitor inteface that will need to be implemented
+* The visitor interface that will need to be implemented
 * */
     public interface Visitor {
 
@@ -89,7 +89,7 @@ public class VisitorPattern {
 
 
 /*
-* First, we create an elelmentVisitor, it hold the algorithemwe will apply to our element
+* First, we create an elementVisitor, it hold the algorithm will apply to our element
 * Next, we setup our Document with proper components and apply the visitor which will be
 * accepted be every element of an object structure
 *

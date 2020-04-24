@@ -20,7 +20,7 @@ public class MergeSort {
             int mid = lo+(hi-lo)/2; //compute the value of the mid point
             sort(a,aux,lo,mid);//sort the first half
             sort(a,aux,mid+1,hi);//sort the 2nd half
-            merge(a,aux,lo,mid,hi);//merge the 2 tpgether
+            merge(a,aux,lo,mid,hi);//merge the 2 together
         }
     }
 

@@ -6,6 +6,13 @@ public class LinkedStackOfStrings {
     public static void main(String[] args) {
 
         LinkedStackOfStrings stack = new LinkedStackOfStrings();
+        stack.push("item 1");
+        stack.push("item 2");
+        stack.push("item 3");
+        System.out.println(toString(stack));
+        System.out.println("************");
+        stack.pop();
+        System.out.println(toString(stack));
     }
 
     public boolean isEmpty() {
@@ -36,4 +43,15 @@ public class LinkedStackOfStrings {
         private String item;
         private Node next;
     }
+
+    public static String toString(LinkedStackOfStrings stack) {
+        StringBuilder builder = new StringBuilder();
+        Node root = stack.first;
+        while (root != null) {
+            builder.append(root.item+" ");
+            root = root.next;
+        }
+        return builder.toString();
+    }
+
 }
