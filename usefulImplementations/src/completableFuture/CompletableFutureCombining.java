@@ -44,7 +44,7 @@ public class CompletableFutureCombining {
             return 10;
         });
         CompletableFuture<Integer> combine = integerFuture1.thenCombine( integerFuture2,(x,y)-> {
-           System.out.println("Inside f "+Thread.currentThread().getName());
+           System.out.println("Inside first thread pool "+Thread.currentThread().getName());
            return x+y;
         });
         combine.thenAccept(d-> System.out.println(d));
