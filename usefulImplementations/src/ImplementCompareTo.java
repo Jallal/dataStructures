@@ -1,5 +1,3 @@
-package usefulImplementations;
-
 import java.util.Date;
 
 public class ImplementCompareTo implements Comparable<Date> {
