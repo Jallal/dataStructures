@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class QuickSort {
 
     /**
@@ -157,8 +160,27 @@ public class QuickSort {
 
     public static void main(String[] args){
 
-        Comparable[] arr = new Comparable[12];
+        //Comparable[] arr = new Comparable[12];
+
+        List<String> list1 = new ArrayList<>();
+        list1.add("g1 act car");
+        list1.add("a1 9 2 3 1");
 
 
+        test(list1,2);
+    }
+
+    public static void test( List<String> list, int i) {
+
+       list.stream().sorted();
+       print(list);
+    }
+
+
+    public static void print(List<String> list){
+        for(String item : list){
+            System.out.println("Element "+item);
+
+        }
     }
 }

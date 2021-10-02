@@ -1,42 +1,39 @@
 
 public class Queues {
-
-    private Node first;
     private Node last;
+    private Node first;
 
+    public boolean isEmpty(){
 
-    public String dequeue() {
-
-        String item = first.item;
-        first = first.next;
-        if (isEmpty()) {
-            last = null;
-        }
-        return item;
+        return first==null;
     }
 
-    public void enqueue(String item) {
+
+    public String dequeue(){
+     String payload = first.payload;
+        first = first.next;
+        if(isEmpty()){
+            last=null;
+        }
+
+        return  payload;
+    }
+
+    public void enqueue(String payload){
 
         Node oldLast = last;
         last = new Node();
-        last.item = item;
-        last.next = null;
-        if (isEmpty()) {
-            first = last;
-        } else {
-            oldLast.next = last;
+        last.payload = payload;
+        last.next=null;
+        if(isEmpty()){
+            first=last;
+        }else{
+            oldLast.next=last;
         }
-
     }
 
-    private boolean isEmpty() {
-        return first == null;
-    }
-
-
-    private class Node {
-
-        String item;
-        Node next;
+    private class Node{
+     String payload;
+     Node next;
     }
 }
