@@ -22,11 +22,13 @@ public class FallingBall {
 
             // check if the ball can fall
             if (prevElevation >= currentElevation && currentElevation > 0) {
-                
+
                 // store the current elevation                       
                 prevElevation = currentElevation;
+
                 // mark this cell as visited
                 elevations[i][j] = 0;
+
                 // try to move the ball
                 computePath(prevElevation, i, j - 1, rows, cols, elevations);
                 computePath(prevElevation, i - 1, j, rows, cols, elevations);
@@ -35,6 +37,18 @@ public class FallingBall {
             }
         }
 
+    }
+
+    public static void main(String[] args) {
+
+        int prevElevation;
+        int i;
+        int j;
+        int rows;
+        int cols;
+        int[][] elevations;
+
+        //System.out.println(">>>>>>>>>>>>>>>>>>>> "+FallingBall.computePath(prevElevation,i,j,rows,cols,elevations));
     }
 
 }
