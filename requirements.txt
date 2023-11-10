@@ -1,0 +1,7 @@
+ipython
+TextBlob
+boto3
+typing
+jupyter
+npm
+install-jdk
