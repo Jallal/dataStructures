@@ -1,10 +1,11 @@
-/* highArray.java
-demonstrates array class with high-level interface
-to run this program: C>java HighArrayApp
-*/
+//  highArray.java
+// demonstrates array class with high-level interface
+// to run this program: C>java HighArrayApp
+// 
 
 public class HighArray {
 
+public static int nElems; // number of data items
    
 
     // -----------------------------------------------------------
@@ -12,7 +13,7 @@ public class HighArray {
     // constructor
     public static long[] buildArray(int max) {
     long[] a; // ref to array a
-    int nElems; // number of data items
+    
 
         // create the array
         a = new long[max];
@@ -25,6 +26,7 @@ public class HighArray {
     // -----------------------------------------------------------
 
     public static boolean find(long searchKey,long[] a) {
+        boolean val = false;
 
         // find specified value
         int j;
@@ -40,12 +42,13 @@ public class HighArray {
             // gone to end?
             if (j == nElems) {
                 // yes, can't find it
-                return false;
+                val = false;
             } else {
                 // no, found it
-                return true;
+                val = true;
             }
         }
+        return val;
 
     }
     // end find()
@@ -96,7 +99,6 @@ public class HighArray {
             System.out.println("");
     }
 
-    // -----------------------------------------------------------
 
     public static void main(String[] args) {
             int maxSize = 100;// array size
