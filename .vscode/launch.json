@@ -6,6 +6,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "HighArrayApp",
+            "request": "launch",
+            "mainClass": "HighArrayApp"
+        },
+        {
+            "type": "java",
+            "name": "HighArray",
+            "request": "launch",
+            "mainClass": "HighArray"
+        },
+        {
+            "type": "java",
             "name": "BinaryRepresentation",
             "request": "launch",
             "mainClass": "BinaryRepresentation",
