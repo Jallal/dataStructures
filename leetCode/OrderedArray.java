@@ -48,6 +48,26 @@ upperBound = curIn -1;
 
 }
 
+}}
+
+
+
+//put element into the array
+public void insert(long value){
+
+    int j;
+
+//find where it goes
+
+for(j =0; j < nElems ; j++){
+
+    //linear search
+
+if(a[j] > value){
+
+    break;
+}
+
 
 
 }
@@ -55,7 +75,8 @@ upperBound = curIn -1;
 
 
 
-}
 
+
+}
     
 }
