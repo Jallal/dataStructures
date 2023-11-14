@@ -99,6 +99,38 @@ public static int nElems; // number of data items
             System.out.println("");
     }
 
+    //Binary Search 
+    public static int findBinaryhSearch(long searchKey, long[] a){
+
+        int lowerBound =0;
+        int upperBound = nElems-1;
+        int curIn;
+
+        while(true){
+
+            curIn = (lowerBound + upperBound)/2;
+
+            if(a[curIn]==searchKey){
+
+                return curIn; //found it
+            } else if(lowerBound> upperBound){
+
+                //Can't find it divide rane
+                return nElems;
+            }else{
+
+                if(a[curIn] < searchKey){
+
+                    //it's in the upper half
+                    lowerBound = curIn + 1;
+                } else{
+                    // it's in the lower half
+                    upperBound = curIn -1;
+                }
+
+            }
+        }
+    }
 
     public static void main(String[] args) {
             int maxSize = 100;// array size
