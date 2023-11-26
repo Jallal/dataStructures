@@ -3,6 +3,16 @@
 // to run this program: C>java HighArrayApp
 // 
 
+import java.util.Map;
+
+import javax.xml.validation.Schema;
+import io.swagger.v3.parser.OpenAPIV3Parser;
+import io.swagger.v3.oas.models.media.Schema;
+import io.swagger.oas.inflector.examples.models.Example;
+import io.swagger.oas.inflector.examples.ExampleBuilder;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import io.swagger.oas.inflector.processors.JsonNodeExampleSerializer;
+import io.swagger.util.Json;
 public class HighArray {
 
 public static int nElems; // number of data items
@@ -132,7 +142,47 @@ public static int nElems; // number of data items
         }
     }
 
+
+
+//put element into the array
+    public void insert(long value){
+
+        int j;
+//find where does the emelemnt go
+        for(j=0; j< nElems; j++){
+
+            //linear search
+            if(a[j] > value){
+                break;
+            }
+
+            //move bigger ones up
+            for(int k = nElems; k > j; j--){
+
+                a[k] = a[k-1];
+            }
+
+        a[i] = value; // insert it
+
+        nElems++;  //increment the size
+        }
+
+
+
+    }
+
+
+
+public boolean delete(long value){
+
+}
+
+
+
+
+
     public static void main(String[] args) {
+
             int maxSize = 100;// array size
             long[] arr = HighArray.buildArray(maxSize); // create the array
             insert(77,arr); // insert 10 items
@@ -157,6 +207,5 @@ public static int nElems; // number of data items
                 display(arr);// display items again
         }
     }
-
 }// end class HighArray
 

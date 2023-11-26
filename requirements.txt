@@ -5,3 +5,7 @@ typing
 jupyter
 npm
 install-jdk
+openapi-python-client
+OpenAPI
+json-schema-validator
+swagger-parser
